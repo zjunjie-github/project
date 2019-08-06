@@ -1,16 +1,19 @@
 ## 我的社区
 
 ## 资料
-[Spring 文档](https://spring.io/guides)
-[Spring Web](https://spring.io/guides/gs/serving-web-content/)
-[Github deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys)
-[Bootstrap](https://v3.bootcss.com/getting-started/)
-[es](https://elasticsearch.cn/)
-[Github OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
-[Spring](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)
+[Spring 文档](https://spring.io/guides)<br>
+[Spring Web](https://spring.io/guides/gs/serving-web-content/)<br>
+[Github deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys)<br>
+[Bootstrap](https://v3.bootcss.com/getting-started/)<br>
+[es](https://elasticsearch.cn/)<br>
+[Github OAuth](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)<br>
+[Spring](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)<br>
+[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)<br>
 
 ## 工具
-[Git](https://git-scm.com/download)
+[Git](https://git-scm.com/download)<br>
+[Flyway](https://flywaydb.org/getstarted/firststeps/maven)<br>
+[Lombok](https://www.projectlombok.org/setup/maven)<br>
 
 ## 脚本
 ```sql

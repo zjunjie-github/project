@@ -50,6 +50,7 @@ public class PublishController {
         }
         User user = null;
         Cookie[] cookies = request.getCookies();
+        if (cookies != null && cookies.length != 0 )
         //遍历cookies，得到token
         for (Cookie cookie : cookies){
             if (cookie.getName().equals("token")){

@@ -1,13 +1,14 @@
-package com.zjj.project.project.model;
+package com.zjj.project.project.dto;
 
+import com.zjj.project.project.model.User;
 import lombok.Data;
 
 /**
- * @author zhangjunjie 2019/7/31
+ * @author zhangjunjie 2019/8/6
  */
 
 @Data
-public class Question {
+public class QuestionDTO {
     private Integer id;
     private String title;
     private String description;
@@ -18,5 +19,5 @@ public class Question {
     private Integer commentCount;
     private Integer viewCount;
     private Integer likeCount;
-
+    private User user;
 }
