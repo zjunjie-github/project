@@ -16,19 +16,8 @@ public class PaginationDTO {
     private List<Integer> pages = new ArrayList<>();
     private Integer totalPage;
 
-    public void setpagination(Integer totalCount, Integer page, Integer size) {
-        //展示当前页的页码
-        if (totalCount % size == 0){
-            totalPage = totalCount / size;
-        }else {
-            totalPage = totalCount / size + 1;
-        }
-        if (page < 1){
-            page = 1;
-        }
-        if (page > totalPage){
-            page = totalPage;
-        }
+    public void setpagination(Integer totalPage, Integer page) {
+        this.totalPage = totalPage;
         this.page = page;
         //分页页码列表展示
         pages.add(page);
