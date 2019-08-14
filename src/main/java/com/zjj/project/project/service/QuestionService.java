@@ -4,6 +4,7 @@ import com.zjj.project.project.dto.PaginationDTO;
 import com.zjj.project.project.dto.QuestionDTO;
 import com.zjj.project.project.exception.CustomizeErrorCode;
 import com.zjj.project.project.exception.CustomizeException;
+import com.zjj.project.project.mapper.QuestionExtMapper;
 import com.zjj.project.project.mapper.QuestionMapper;
 import com.zjj.project.project.mapper.UserMapper;
 import com.zjj.project.project.model.Question;
@@ -26,6 +27,8 @@ public class QuestionService {
 
     @Autowired
     private QuestionMapper questionMapper;
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
     @Autowired
     private UserMapper userMapper;
 
@@ -129,5 +132,12 @@ public class QuestionService {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
         }
+    }
+
+    public void incView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
