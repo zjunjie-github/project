@@ -1,14 +1,21 @@
 package com.zjj.project.project.dto;
 
-/**
- * @author zhangjunjie 2019/8/14
- */
-
+import com.zjj.project.project.model.User;
 import lombok.Data;
+
+/**
+ * @author zhangjunjie 2019/8/15
+ */
 
 @Data
 public class CommentDTO {
+    private Long id;
     private Long parentId;
-    private String content;
     private Integer type;
+    private Long commentator;
+    private Long gmtCreate;
+    private Long gmtModified;
+    private Long likeCount;
+    private String content;
+    private User user;
 }
