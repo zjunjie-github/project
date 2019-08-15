@@ -1,6 +1,5 @@
 package com.zjj.project.project.controller;
 
-import com.zjj.project.project.dto.CommentCreateDTO;
 import com.zjj.project.project.dto.CommentDTO;
 import com.zjj.project.project.dto.QuestionDTO;
 import com.zjj.project.project.service.CommentService;
