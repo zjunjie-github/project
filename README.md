@@ -14,6 +14,7 @@
 [Git](https://git-scm.com/download)<br>
 [Flyway](https://flywaydb.org/getstarted/firststeps/maven)<br>
 [Lombok](https://www.projectlombok.org/setup/maven)<br>
+[Postman](https://chrome.google.com/webstore)
 
 ## 脚本
 ```sql
@@ -28,4 +29,9 @@ create table USER
 	constraint USER_PK
 		primary key (ID)
 );
+```
+```bash
+mvn flyway:migrate
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+
 ```

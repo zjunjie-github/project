@@ -6,4 +6,5 @@ package com.zjj.project.project.exception;
 
 public interface ICustomizeErrorCode {
     String getMessage();
+    Integer getCode();
 }
