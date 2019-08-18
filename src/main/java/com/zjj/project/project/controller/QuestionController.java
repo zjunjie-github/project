@@ -2,6 +2,7 @@ package com.zjj.project.project.controller;
 
 import com.zjj.project.project.dto.CommentDTO;
 import com.zjj.project.project.dto.QuestionDTO;
+import com.zjj.project.project.enums.CommentTypeEnum;
 import com.zjj.project.project.service.CommentService;
 import com.zjj.project.project.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ public class QuestionController {
     @GetMapping("/question/{id}")
     public String question(@PathVariable(name = "id") Long id, Model model){
         QuestionDTO questionDTO = questionService.getById(id);
-        List<CommentDTO> comments = commentService.listByQuestionId(id);
+        List<CommentDTO> comments = commentService.listByTargetId(id, CommentTypeEnum.QUESTION);
 
         //累加阅读（浏览）数
         questionService.incView(id);
