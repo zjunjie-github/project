@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class PaginationDTO {
-    private List<QuestionDTO> questions;
+public class PaginationDTO<T> {
+    private List<T> data;
     private boolean showPrevious;
     private boolean showFirstPage;
     private boolean showNext;
@@ -16,7 +16,7 @@ public class PaginationDTO {
     private List<Integer> pages = new ArrayList<>();
     private Integer totalPage;
 
-    public void setpagination(Integer totalPage, Integer page) {
+    public void setPagination(Integer totalPage, Integer page) {
         this.totalPage = totalPage;
         this.page = page;
         //分页页码列表展示

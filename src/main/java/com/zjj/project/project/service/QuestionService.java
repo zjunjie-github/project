@@ -52,7 +52,7 @@ public class QuestionService {
         if (page > totalPage){
             page = totalPage;
         }
-        paginationDTO.setpagination(totalPage,page);
+        paginationDTO.setPagination(totalPage,page);
         //offset = size * (page - 1)
         Integer offset = size * (page - 1);
         QuestionExample questionExample = new QuestionExample();
@@ -67,7 +67,7 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOList.add(questionDTO);
         }
-        paginationDTO.setQuestions(questionDTOList);
+        paginationDTO.setData(questionDTOList);
         return paginationDTO;
     }
 
@@ -89,7 +89,7 @@ public class QuestionService {
         if (page > totalPage){
             page = totalPage;
         }
-        paginationDTO.setpagination(totalPage,page);
+        paginationDTO.setPagination(totalPage,page);
         //offset = size * (page - 1)
         Integer offset = size * (page - 1);
         QuestionExample example = new QuestionExample();
@@ -103,7 +103,7 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOList.add(questionDTO);
         }
-        paginationDTO.setQuestions(questionDTOList);
+        paginationDTO.setData(questionDTOList);
         return paginationDTO;
     }
 
