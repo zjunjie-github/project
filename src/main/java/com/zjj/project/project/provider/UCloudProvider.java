@@ -26,7 +26,18 @@ public class UCloudProvider {
 
     @Value("${ucloud.ufile.private-key}")
     private String privateKey;
-    private String bucketName = "zjjcommunity";
+
+    @Value("${ucloud.ufile.bucket-name}")
+    private String bucketName;
+
+    @Value("${ucloud.ufile.region}")
+    private String region;
+
+    @Value("${ucloud.ufile.suffix}")
+    private String suffix;
+
+    @Value("${ucloud.ufile.expires}")
+    private Integer expires;
 
     public String upload(InputStream fileStream,String mimeType,String fileName){
         String generatedFileName;
@@ -38,11 +49,11 @@ public class UCloudProvider {
         }
         try {
             ObjectAuthorization objectAuthorization = new UfileObjectLocalAuthorization(publicKey,privateKey);
-            ObjectConfig config = new ObjectConfig("cn-bj","ufileos.com");
+            ObjectConfig config = new ObjectConfig(region,suffix);
             PutObjectResultBean response = UfileClient.object(objectAuthorization,config)
                     .putObject(fileStream,mimeType).nameAs(generatedFileName).toBucket(bucketName).setOnProgressListener((bytesWritten, contentLength) -> {}).execute();
             if (response != null && response.getRetCode() == 0){
-                String url = UfileClient.object(objectAuthorization,config).getDownloadUrlFromPrivateBucket(generatedFileName,bucketName,24 * 60* 60).createUrl();
+                String url = UfileClient.object(objectAuthorization,config).getDownloadUrlFromPrivateBucket(generatedFileName,bucketName,expires).createUrl();
                 return url;
             }else {
                 throw new CustomizeException(CustomizeErrorCode.FILE_UPLOAD_FAIL);
