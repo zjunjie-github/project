@@ -7,14 +7,17 @@ import com.zjj.project.project.enums.NoyificationTypeEnum;
 import com.zjj.project.project.exception.CustomizeErrorCode;
 import com.zjj.project.project.exception.CustomizeException;
 import com.zjj.project.project.mapper.NotificationMapper;
-import com.zjj.project.project.mapper.UserMapper;
-import com.zjj.project.project.model.*;
+import com.zjj.project.project.model.Notification;
+import com.zjj.project.project.model.NotificationExample;
+import com.zjj.project.project.model.User;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * @author zhangjunjie 2019/8/19

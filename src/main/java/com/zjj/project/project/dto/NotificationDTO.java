@@ -1,6 +1,5 @@
 package com.zjj.project.project.dto;
 
-import com.zjj.project.project.model.User;
 import lombok.Data;
 
 /**

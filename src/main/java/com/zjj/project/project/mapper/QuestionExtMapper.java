@@ -2,9 +2,6 @@ package com.zjj.project.project.mapper;
 
 import com.zjj.project.project.dto.QuestionQueryDTO;
 import com.zjj.project.project.model.Question;
-import com.zjj.project.project.model.QuestionExample;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 
